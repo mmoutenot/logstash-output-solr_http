@@ -52,7 +52,7 @@ class LogStash::Outputs::SolrHTTP < LogStash::Outputs::Base
 
   public
   def receive(event)
-    
+
     buffer_receive(event)
   end #def receive
 
@@ -72,6 +72,8 @@ class LogStash::Outputs::SolrHTTP < LogStash::Outputs::Base
     end
 
     @solr.add(documents)
+    @solr.commit()
+
     rescue Exception => e
       @logger.warn("An error occurred while indexing: #{e.message}")
   end #def flush

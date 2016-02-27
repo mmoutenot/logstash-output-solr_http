@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
 
-  s.name            = 'logstash-output-solr_http'
+  s.name            = 'upstream-logstash-output-solr_http'
   s.version         = '2.0.2'
   s.licenses        = ['Apache License (2.0)']
   s.summary         = "This output lets you index&store your logs in Solr."
